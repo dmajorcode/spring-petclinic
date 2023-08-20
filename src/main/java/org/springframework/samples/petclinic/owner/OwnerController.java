@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.owner;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -45,7 +46,7 @@ import jakarta.validation.Valid;
 class OwnerController {
 
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
-
+	@Autowired
 	private final OwnerRepository owners;
 
 	public OwnerController(OwnerRepository clinicService) {
